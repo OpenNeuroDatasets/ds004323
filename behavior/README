@@ -1,0 +1,22 @@
+MongoDB dump with behavioral and modeling data.
+
+# Requirements
+
+* MongoDB >= 3.2.8
+
+# Usage
+
+    cat dump.tar.gz.parta* > dump.tar.gz
+    tar -xzvf dump.tar.gz
+    mongorestore dump/
+
+# Collections
+
+- `games`: game and level descriptions
+- `subjects`: subjects; id field is `subj_id`; no demographic/identifying data
+- `runs`: scanner runs; id field is `run_id` (starting from 1; 0 is the practice run outside the scanner)
+- `plays`: episodes of gameplay, including all keypresses and game states
+- `regressors`: EMPA regressors, derived from `plays` with EMPA
+- `dqn_regressors_25M`: DDQN regressors, derived from `plays` with DDQN
+- `plays_post`: visual confound regressors, derived from `plays` after some post processing
+- `sim_results`: result from generative play for EMPA and DDQN
