@@ -1,5 +1,0 @@
-Code used for data collection, simulations, and analysis. Split into three repositories (each has its own README):
-
-- `EMPA`: python code for generating simulations and regressors using EMPA. See [GitHub repo](`https://github.com/tsividis/vgdl/tree/refactor_fMRI_cannon`) for most up-to-date version.
-- `analysis`: MATLAB code for analyzing and visualizing the data. See [GitHub repo](`https://github.com/tomov/VGDL-fMRI-Data-Analysis`) for most up-to-date version.
-- `DDQN`: python code for generating simulations and regressors using the DDQN. See [GitHub repo](`https://github.com/tomov/RC_RL`) for most up-to-date version.
