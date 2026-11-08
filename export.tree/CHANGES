@@ -1,0 +1,8 @@
+1.0.2 2026-11-08
+  - behavior/dump.tar.gz (and .part* files): restored the complete EMPA `regressors` collection (6,652 plays; previously 5,241, with subject 2 missing). All other collections unchanged
+  - behavior/glm_inputs.tar.gz: added the exact per-run GLM designs (GLMs 102-106) and cached regressors used in the paper.
+  - .bidsignore: ignore the non-BIDS behavior/, code/ and games/ folders (required by the current BIDS validator).
+1.0.1 2026-03-29
+  - Meta
+1.0.0 2022-10-31
+  - initial
