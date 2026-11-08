@@ -20,3 +20,21 @@ MongoDB dump with behavioral and modeling data.
 - `dqn_regressors_25M`: DDQN regressors, derived from `plays` with DDQN
 - `plays_post`: visual confound regressors, derived from `plays` after some post processing
 - `sim_results`: result from generative play for EMPA and DDQN
+
+# Version history of the dump
+
+In versions 1.0.0 and 1.0.1, the `regressors` collection was incomplete. It held 5,241 of
+6,652 plays: subject 2 had none, and most other subjects were missing some. It came from a
+database snapshot taken partway through the final EMPA replay batch in July 2021. Version
+1.0.2 replaces `regressors.bson` with the complete collection. The 5,241 documents that were
+already there are unchanged, byte for byte. All other collections are identical to 1.0.1.
+
+# GLM inputs
+
+`glm_inputs.tar.gz` contains the exact per-run SPM designs (GLMs 102–106) and cached EMPA
+regressors used for the theory-update analyses in the paper. See `glm_inputs/README.md`
+inside the archive for details. One note: for subject 2, run 1, the published analyses used
+an earlier EMPA replay than the one stored in the Mongo dump. Only `glm_inputs.tar.gz` has
+that earlier replay.
+
+    tar -xzvf glm_inputs.tar.gz
